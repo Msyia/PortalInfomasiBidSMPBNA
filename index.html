@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Informasi Kegiatan SMP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-school"></i> Portal SMP
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#beranda">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#berita">Berita</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#galeri">Galeri</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#statistik">Statistik</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+   <section id="beranda" class="hero-section" style="position: relative;">
+  <!-- Background image -->
+  <div style="
+      background-image: url('img/bcg.jpeg');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.5); /* membuat gambar lebih gelap */
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 0;
+  "></div>
+
+  <!-- Overlay content -->
+  <div class="container" style="position: relative; z-index: 1; text-align: center; padding: 100px 0;">
+    <h1 style="color: white; text-shadow: 2px 2px 5px rgba(0,0,0,0.8);">
+      Portal Informasi Kegiatan SMP
+    </h1>
+    <p style="color: white; text-shadow: 1px 1px 4px rgba(0,0,0,0.7);">
+      Pusat informasi berita dan kegiatan SMP se-wilayah terkini
+    </p>
+    <a href="#berita" class="btn btn-light btn-lg mt-3">
+      <i class="fas fa-newspaper"></i> Lihat Berita Terbaru
+    </a>
+  </div>
+</section>
+
+    <!-- News Section -->
+    <section id="berita" class="py-5">
+        <div class="container">
+            <div class="section-title">
+                <h2>Berita & Kegiatan Terbaru</h2>
+                <p>Informasi terkini seputar kegiatan SMP di wilayah kami</p>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="category-filter">
+                <button class="filter-btn active" data-category="semua">Semua</button>
+                <button class="filter-btn" data-category="akademik">Akademik</button>
+                <button class="filter-btn" data-category="non-akademik">Non-Akademik</button>
+                <button class="filter-btn" data-category="lomba">Lomba</button>
+                <button class="filter-btn" data-category="prestasi">Prestasi</button>
+            </div>
+
+            <div class="row" id="newsContainer">
+                <!-- News items will be populated by JavaScript -->
+            </div>
+
+            <div class="text-center mt-4">
+                <button class="btn btn-primary" id="loadMoreBtn">
+                    <i class="fas fa-plus"></i> Muat Lebih Banyak
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeri" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Galeri Kegiatan</h2>
+                <p>Dokumentasi visual kegiatan-kegiatan SMP</p>
+            </div>
+
+            <div class="row" id="galleryContainer">
+                <!-- Gallery items will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="statistik" class="stats-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Statistik Kegiatan</h2>
+                <p>Data kegiatan SMP dalam angka</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-card">
+                        <i class="fas fa-school"></i>
+                        <div class="stat-number" data-target="37">0</div>
+                        <p>SMP Terdaftar</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <div class="stat-number" data-target="128">0</div>
+                        <p>Kegiatan Tahun Ini</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-card">
+                        <i class="fa fa-user"></i>
+                        <div class="stat-number" data-target="67">0</div>
+                        <p>Guru Terlibat</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-card">
+                        <i class="fas fa-users"></i>
+                        <div class="stat-number" data-target="15420">0</div>
+                        <p>Siswa Terlibat</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5><i class="fas fa-school"></i> Portal SMP</h5>
+                    <p>Portal informasi terpercaya untuk kegiatan SMP se-wilayah. Menyajikan berita terkini dan dokumentasi kegiatan.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Menu Utama</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#beranda">Beranda</a></li>
+                        <li><a href="#berita">Berita</a></li>
+                        <li><a href="#galeri">Galeri</a></li>
+                        <li><a href="#statistik">Statistik</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Kontak</h5>
+                    <p><i class="fas fa-envelope"></i> info@portalsmp.id</p>
+                    <p><i class="fas fa-phone"></i> (021) 123-4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Kota Banda Aceh, Provinsi Aceh</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2025 Portal Informasi Kegiatan SMP di Kota Banda Aceh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- News Detail Modal -->
+    <div class="modal fade" id="newsModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newsModalTitle"></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="newsModalBody">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Modal -->
+    <div class="modal fade" id="galleryModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="galleryModalTitle"></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center" id="galleryModalBody">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="script.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96612564c1ccd7ad',t:'MTc1MzY3MTgzNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

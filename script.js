@@ -88,6 +88,7 @@ const newsData = [
   title: "SMPN 1 Wakili Banda Aceh di FLS2N Provinsi (Tari Kreasi Baru)",
   category: "non-akademik",
   date:"2025-06-18",
+  author:"Admin Portal",
   image:
     "img/tarikreasi.jpg",
   excerpt:
